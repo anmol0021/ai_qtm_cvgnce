@@ -1,0 +1,11 @@
+# versions used for the reported results (Python 3.14, CPU only)
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.18.0
+networkx==3.6.1
+pyarrow==24.0.0
+scikit-learn==1.9.0
+matplotlib==3.11.1
+torch==2.13.0
+# only for feature_pipeline/scripts/keyword_selection/
+sentence-transformers==6.2.0

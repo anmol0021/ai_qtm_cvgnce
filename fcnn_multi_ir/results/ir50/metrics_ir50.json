@@ -1,0 +1,24 @@
+{
+  "impact_range": 50,
+  "train_rows": 17117,
+  "val_rows": 3021,
+  "test_rows": 19736,
+  "epochs_run": 145,
+  "best_epoch": 120,
+  "val_auc": 0.8835,
+  "test_auc": 0.8137,
+  "test_accuracy": 0.7396,
+  "test_precision": 0.7807,
+  "test_recall": 0.6665,
+  "test_f1": 0.7191,
+  "TPR_at_FPR_0.1": 0.5322,
+  "TPR_at_FPR_0.3": 0.7731,
+  "top100_precision": 0.98,
+  "top100_mean_impact": 89.4,
+  "confusion_matrix": {
+    "TN": 8020,
+    "FP": 1848,
+    "FN": 3291,
+    "TP": 6577
+  }
+}

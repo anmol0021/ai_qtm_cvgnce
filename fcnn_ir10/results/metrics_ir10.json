@@ -1,0 +1,23 @@
+{
+  "impact_range": 10,
+  "train_rows": 74181,
+  "val_rows": 13091,
+  "test_rows": 86316,
+  "trainable_parameters": 1167601,
+  "epochs_run": 107,
+  "best_epoch": 82,
+  "val_auc": 0.8637,
+  "test_auc": 0.8598,
+  "test_accuracy": 0.7849,
+  "test_precision": 0.7946,
+  "test_recall": 0.7681,
+  "test_f1": 0.7811,
+  "confusion_matrix": {
+    "TN": 34620,
+    "FP": 8565,
+    "FN": 10010,
+    "TP": 33130
+  },
+  "test_TPR_at_FPR_0.1": 0.6363,
+  "test_TPR_at_FPR_0.3": 0.8415
+}

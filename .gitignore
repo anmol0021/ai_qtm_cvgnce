@@ -1,0 +1,17 @@
+# large / generated data (not versioned)
+*.jsonl
+*.parquet
+*.pt
+*.npz
+*.npy
+*.pkl
+**/data/*.csv
+!**/data/feature_dictionary.csv
+feature_pipeline/output/_work/
+feature_pipeline/output/pairs_*/
+feature_pipeline/output/pairs_summary.json
+feature_pipeline/output/validation_auc.json
+**/results/**/test_predictions_*.csv
+**/results/*.txt
+__pycache__/
+*.zip

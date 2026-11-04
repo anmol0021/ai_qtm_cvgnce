@@ -1,0 +1,142 @@
+index,feature,group,description
+0,f_N_u_y-0,node_network,[u] degree = number of distinct keywords it has co-occurred with | until year y
+1,f_N_v_y-0,node_network,[v] degree = number of distinct keywords it has co-occurred with | until year y
+2,f_N_u_y-1,node_network,[u] degree = number of distinct keywords it has co-occurred with | until year y-1
+3,f_N_v_y-1,node_network,[v] degree = number of distinct keywords it has co-occurred with | until year y-1
+4,f_N_u_y-2,node_network,[u] degree = number of distinct keywords it has co-occurred with | until year y-2
+5,f_N_v_y-2,node_network,[v] degree = number of distinct keywords it has co-occurred with | until year y-2
+6,f_newN_1y_u,node_network,[u] new neighbours gained = N(y) - N(y-1)
+7,f_newN_1y_v,node_network,[v] new neighbours gained = N(y) - N(y-1)
+8,f_newN_2y_u,node_network,[u] new neighbours gained = N(y) - N(y-2)
+9,f_newN_2y_v,node_network,[v] new neighbours gained = N(y) - N(y-2)
+10,f_rank_newN_1y_u,node_network,[u] rank of new neighbours gained over last 1 year(s) among all 3000 keywords (1 = most)
+11,f_rank_newN_1y_v,node_network,[v] rank of new neighbours gained over last 1 year(s) among all 3000 keywords (1 = most)
+12,f_rank_newN_2y_u,node_network,[u] rank of new neighbours gained over last 2 year(s) among all 3000 keywords (1 = most)
+13,f_rank_newN_2y_v,node_network,[v] rank of new neighbours gained over last 2 year(s) among all 3000 keywords (1 = most)
+14,f_PR_u_y-0,node_network,[u] PageRank score in the keyword graph | until year y
+15,f_PR_v_y-0,node_network,[v] PageRank score in the keyword graph | until year y
+16,f_PR_u_y-1,node_network,[u] PageRank score in the keyword graph | until year y-1
+17,f_PR_v_y-1,node_network,[v] PageRank score in the keyword graph | until year y-1
+18,f_PR_u_y-2,node_network,[u] PageRank score in the keyword graph | until year y-2
+19,f_PR_v_y-2,node_network,[v] PageRank score in the keyword graph | until year y-2
+20,f_C_u_y-0,node_citation,[u] citations received in that single year by all papers mentioning it | until year y
+21,f_C_v_y-0,node_citation,[v] citations received in that single year by all papers mentioning it | until year y
+22,f_C_u_y-1,node_citation,[u] citations received in that single year by all papers mentioning it | until year y-1
+23,f_C_v_y-1,node_citation,[v] citations received in that single year by all papers mentioning it | until year y-1
+24,f_C_u_y-2,node_citation,[u] citations received in that single year by all papers mentioning it | until year y-2
+25,f_C_v_y-2,node_citation,[v] citations received in that single year by all papers mentioning it | until year y-2
+26,f_Ct_u_y-0,node_citation,[u] total citations received so far (since first paper) by all papers mentioning it | until year y
+27,f_Ct_v_y-0,node_citation,[v] total citations received so far (since first paper) by all papers mentioning it | until year y
+28,f_Ct_u_y-1,node_citation,[u] total citations received so far (since first paper) by all papers mentioning it | until year y-1
+29,f_Ct_v_y-1,node_citation,[v] total citations received so far (since first paper) by all papers mentioning it | until year y-1
+30,f_Ct_u_y-2,node_citation,[u] total citations received so far (since first paper) by all papers mentioning it | until year y-2
+31,f_Ct_v_y-2,node_citation,[v] total citations received so far (since first paper) by all papers mentioning it | until year y-2
+32,f_Ct3_u_y-0,node_citation,[u] citations received in the 3 years ending that year by papers mentioning it | until year y
+33,f_Ct3_v_y-0,node_citation,[v] citations received in the 3 years ending that year by papers mentioning it | until year y
+34,f_Ct3_u_y-1,node_citation,[u] citations received in the 3 years ending that year by papers mentioning it | until year y-1
+35,f_Ct3_v_y-1,node_citation,[v] citations received in the 3 years ending that year by papers mentioning it | until year y-1
+36,f_Ct3_u_y-2,node_citation,[u] citations received in the 3 years ending that year by papers mentioning it | until year y-2
+37,f_Ct3_v_y-2,node_citation,[v] citations received in the 3 years ending that year by papers mentioning it | until year y-2
+38,f_Pn_u_y-0,node_citation,[u] number of papers mentioning it so far | until year y
+39,f_Pn_v_y-0,node_citation,[v] number of papers mentioning it so far | until year y
+40,f_Pn_u_y-1,node_citation,[u] number of papers mentioning it so far | until year y-1
+41,f_Pn_v_y-1,node_citation,[v] number of papers mentioning it so far | until year y-1
+42,f_Pn_u_y-2,node_citation,[u] number of papers mentioning it so far | until year y-2
+43,f_Pn_v_y-2,node_citation,[v] number of papers mentioning it so far | until year y-2
+44,f_Cm_u_y-0,node_citation,[u] average yearly citations per paper = C / Pn | until year y
+45,f_Cm_v_y-0,node_citation,[v] average yearly citations per paper = C / Pn | until year y
+46,f_Cm_u_y-1,node_citation,[u] average yearly citations per paper = C / Pn | until year y-1
+47,f_Cm_v_y-1,node_citation,[v] average yearly citations per paper = C / Pn | until year y-1
+48,f_Cm_u_y-2,node_citation,[u] average yearly citations per paper = C / Pn | until year y-2
+49,f_Cm_v_y-2,node_citation,[v] average yearly citations per paper = C / Pn | until year y-2
+50,f_Ctm_u_y-0,node_citation,[u] average total citations per paper = Ct / Pn | until year y
+51,f_Ctm_v_y-0,node_citation,[v] average total citations per paper = Ct / Pn | until year y
+52,f_Ctm_u_y-1,node_citation,[u] average total citations per paper = Ct / Pn | until year y-1
+53,f_Ctm_v_y-1,node_citation,[v] average total citations per paper = Ct / Pn | until year y-1
+54,f_Ctm_u_y-2,node_citation,[u] average total citations per paper = Ct / Pn | until year y-2
+55,f_Ctm_v_y-2,node_citation,[v] average total citations per paper = Ct / Pn | until year y-2
+56,f_Ctm3_u_y-0,node_citation,[u] average 3-year citations per paper = Ct3 / Pn | until year y
+57,f_Ctm3_v_y-0,node_citation,[v] average 3-year citations per paper = Ct3 / Pn | until year y
+58,f_Ctm3_u_y-1,node_citation,[u] average 3-year citations per paper = Ct3 / Pn | until year y-1
+59,f_Ctm3_v_y-1,node_citation,[v] average 3-year citations per paper = Ct3 / Pn | until year y-1
+60,f_Ctm3_u_y-2,node_citation,[u] average 3-year citations per paper = Ct3 / Pn | until year y-2
+61,f_Ctm3_v_y-2,node_citation,[v] average 3-year citations per paper = Ct3 / Pn | until year y-2
+62,f_newCt_1y_u,node_citation,[u] new citations gained = Ct(y) - Ct(y-1)
+63,f_newCt_1y_v,node_citation,[v] new citations gained = Ct(y) - Ct(y-1)
+64,f_newCt_2y_u,node_citation,[u] new citations gained = Ct(y) - Ct(y-2)
+65,f_newCt_2y_v,node_citation,[v] new citations gained = Ct(y) - Ct(y-2)
+66,f_rank_newCt_1y_u,node_citation,[u] rank of new citations gained over last 1 year(s) among all keywords (1 = most)
+67,f_rank_newCt_1y_v,node_citation,[v] rank of new citations gained over last 1 year(s) among all keywords (1 = most)
+68,f_rank_newCt_2y_u,node_citation,[u] rank of new citations gained over last 2 year(s) among all keywords (1 = most)
+69,f_rank_newCt_2y_v,node_citation,[v] rank of new citations gained over last 2 year(s) among all keywords (1 = most)
+70,f_newPn_1y_u,node_citation,[u] new papers mentioning it = Pn(y) - Pn(y-1)
+71,f_newPn_1y_v,node_citation,[v] new papers mentioning it = Pn(y) - Pn(y-1)
+72,f_newPn_2y_u,node_citation,[u] new papers mentioning it = Pn(y) - Pn(y-2)
+73,f_newPn_2y_v,node_citation,[v] new papers mentioning it = Pn(y) - Pn(y-2)
+74,f_rank_newPn_1y_u,node_citation,[u] rank of new papers over last 1 year(s) among all keywords (1 = most)
+75,f_rank_newPn_1y_v,node_citation,[v] rank of new papers over last 1 year(s) among all keywords (1 = most)
+76,f_rank_newPn_2y_u,node_citation,[u] rank of new papers over last 2 year(s) among all keywords (1 = most)
+77,f_rank_newPn_2y_v,node_citation,[v] rank of new papers over last 2 year(s) among all keywords (1 = most)
+78,f_Ns_y-0,pair_network,[pair] shared neighbours of u and v (keywords linked to both) | at year y
+79,f_Ns_y-1,pair_network,[pair] shared neighbours of u and v (keywords linked to both) | at year y-1
+80,f_Ns_y-2,pair_network,[pair] shared neighbours of u and v (keywords linked to both) | at year y-2
+81,f_Geo_y-0,pair_network,[pair] geometric similarity = Ns^2 / (Nu * Nv) | at year y
+82,f_Geo_y-1,pair_network,[pair] geometric similarity = Ns^2 / (Nu * Nv) | at year y-1
+83,f_Geo_y-2,pair_network,[pair] geometric similarity = Ns^2 / (Nu * Nv) | at year y-2
+84,f_Cos_y-0,pair_network,[pair] cosine similarity = Ns / sqrt(Nu * Nv) | at year y
+85,f_Cos_y-1,pair_network,[pair] cosine similarity = Ns / sqrt(Nu * Nv) | at year y-1
+86,f_Cos_y-2,pair_network,[pair] cosine similarity = Ns / sqrt(Nu * Nv) | at year y-2
+87,f_Sim_y-0,pair_network,"[pair] Simpson similarity = Ns / min(Nu, Nv) | at year y"
+88,f_Sim_y-1,pair_network,"[pair] Simpson similarity = Ns / min(Nu, Nv) | at year y-1"
+89,f_Sim_y-2,pair_network,"[pair] Simpson similarity = Ns / min(Nu, Nv) | at year y-2"
+90,f_Pre_y-0,pair_network,[pair] preferential attachment = Nu * Nv | at year y
+91,f_Pre_y-1,pair_network,[pair] preferential attachment = Nu * Nv | at year y-1
+92,f_Pre_y-2,pair_network,[pair] preferential attachment = Nu * Nv | at year y-2
+93,f_Sor_y-0,pair_network,[pair] Sorensen-Dice = 2 Ns / (Nu + Nv) | at year y
+94,f_Sor_y-1,pair_network,[pair] Sorensen-Dice = 2 Ns / (Nu + Nv) | at year y-1
+95,f_Sor_y-2,pair_network,[pair] Sorensen-Dice = 2 Ns / (Nu + Nv) | at year y-2
+96,f_Jac_y-0,pair_network,[pair] Jaccard = Ns / (Nu + Nv - Ns) | at year y
+97,f_Jac_y-1,pair_network,[pair] Jaccard = Ns / (Nu + Nv - Ns) | at year y-1
+98,f_Jac_y-2,pair_network,[pair] Jaccard = Ns / (Nu + Nv - Ns) | at year y-2
+99,f_r1_y-0,pair_citation,[pair] (Ct_u + Ct_v) / (Pn_u + Pn_v): citations per paper of the two keywords combined | at year y
+100,f_r1_y-1,pair_citation,[pair] (Ct_u + Ct_v) / (Pn_u + Pn_v): citations per paper of the two keywords combined | at year y-1
+101,f_r1_y-2,pair_citation,[pair] (Ct_u + Ct_v) / (Pn_u + Pn_v): citations per paper of the two keywords combined | at year y-2
+102,f_r2_y-0,pair_citation,[pair] (Ct_u * Ct_v) / (Pn_u + Pn_v) | at year y
+103,f_r2_y-1,pair_citation,[pair] (Ct_u * Ct_v) / (Pn_u + Pn_v) | at year y-1
+104,f_r2_y-2,pair_citation,[pair] (Ct_u * Ct_v) / (Pn_u + Pn_v) | at year y-2
+105,f_s_y-0,pair_citation,[pair] Cm_u + Cm_v (sum of average yearly citations) | at year y
+106,f_s_y-1,pair_citation,[pair] Cm_u + Cm_v (sum of average yearly citations) | at year y-1
+107,f_s_y-2,pair_citation,[pair] Cm_u + Cm_v (sum of average yearly citations) | at year y-2
+108,f_st_y-0,pair_citation,[pair] Ctm_u + Ctm_v (sum of average total citations) | at year y
+109,f_st_y-1,pair_citation,[pair] Ctm_u + Ctm_v (sum of average total citations) | at year y-1
+110,f_st_y-2,pair_citation,[pair] Ctm_u + Ctm_v (sum of average total citations) | at year y-2
+111,f_st3_y-0,pair_citation,[pair] Ct3_u + Ct3_v (sum of 3-year citations) | at year y
+112,f_st3_y-1,pair_citation,[pair] Ct3_u + Ct3_v (sum of 3-year citations) | at year y-1
+113,f_st3_y-2,pair_citation,[pair] Ct3_u + Ct3_v (sum of 3-year citations) | at year y-2
+114,f_stm3_y-0,pair_citation,[pair] Ctm3_u + Ctm3_v (sum of average 3-year citations) | at year y
+115,f_stm3_y-1,pair_citation,[pair] Ctm3_u + Ctm3_v (sum of average 3-year citations) | at year y-1
+116,f_stm3_y-2,pair_citation,[pair] Ctm3_u + Ctm3_v (sum of average 3-year citations) | at year y-2
+117,f_minC_y-0,pair_citation,"[pair] min(C_u, C_v) | at year y"
+118,f_minC_y-1,pair_citation,"[pair] min(C_u, C_v) | at year y-1"
+119,f_minC_y-2,pair_citation,"[pair] min(C_u, C_v) | at year y-2"
+120,f_maxC_y-0,pair_citation,"[pair] max(C_u, C_v) | at year y"
+121,f_maxC_y-1,pair_citation,"[pair] max(C_u, C_v) | at year y-1"
+122,f_maxC_y-2,pair_citation,"[pair] max(C_u, C_v) | at year y-2"
+123,f_minCt_y-0,pair_citation,"[pair] min(Ct_u, Ct_v) | at year y"
+124,f_minCt_y-1,pair_citation,"[pair] min(Ct_u, Ct_v) | at year y-1"
+125,f_minCt_y-2,pair_citation,"[pair] min(Ct_u, Ct_v) | at year y-2"
+126,f_maxCt_y-0,pair_citation,"[pair] max(Ct_u, Ct_v) | at year y"
+127,f_maxCt_y-1,pair_citation,"[pair] max(Ct_u, Ct_v) | at year y-1"
+128,f_maxCt_y-2,pair_citation,"[pair] max(Ct_u, Ct_v) | at year y-2"
+129,f_minCt3_y-0,pair_citation,"[pair] min(Ct3_u, Ct3_v) | at year y"
+130,f_minCt3_y-1,pair_citation,"[pair] min(Ct3_u, Ct3_v) | at year y-1"
+131,f_minCt3_y-2,pair_citation,"[pair] min(Ct3_u, Ct3_v) | at year y-2"
+132,f_maxCt3_y-0,pair_citation,"[pair] max(Ct3_u, Ct3_v) | at year y"
+133,f_maxCt3_y-1,pair_citation,"[pair] max(Ct3_u, Ct3_v) | at year y-1"
+134,f_maxCt3_y-2,pair_citation,"[pair] max(Ct3_u, Ct3_v) | at year y-2"
+135,f_minPn_y-0,pair_citation,"[pair] min(Pn_u, Pn_v) | at year y"
+136,f_minPn_y-1,pair_citation,"[pair] min(Pn_u, Pn_v) | at year y-1"
+137,f_minPn_y-2,pair_citation,"[pair] min(Pn_u, Pn_v) | at year y-2"
+138,f_maxPn_y-0,pair_citation,"[pair] max(Pn_u, Pn_v) | at year y"
+139,f_maxPn_y-1,pair_citation,"[pair] max(Pn_u, Pn_v) | at year y-1"
+140,f_maxPn_y-2,pair_citation,"[pair] max(Pn_u, Pn_v) | at year y-2"
