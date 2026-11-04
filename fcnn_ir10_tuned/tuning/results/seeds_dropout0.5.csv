@@ -1,0 +1,26 @@
+seed,rule,epoch_used,val_auc,test_auc
+42,val_loss patience 10,49,0.8558,0.8775
+42,val_loss patience 25,92,0.8597,0.8755
+42,val_auc patience 10,95,0.861,0.8749
+42,val_auc patience 25,150,0.8635,0.8683
+42,max test AUC (NOT FAIR),24,0.8635,0.8798
+1,val_loss patience 10,38,0.8548,0.8777
+1,val_loss patience 25,94,0.8601,0.8754
+1,val_auc patience 10,98,0.8604,0.8744
+1,val_auc patience 25,138,0.8627,0.87
+1,max test AUC (NOT FAIR),19,0.8627,0.8798
+2,val_loss patience 10,31,0.854,0.879
+2,val_loss patience 25,49,0.8559,0.8773
+2,val_auc patience 10,140,0.8629,0.8709
+2,val_auc patience 25,149,0.8632,0.8684
+2,max test AUC (NOT FAIR),17,0.8632,0.8799
+3,val_loss patience 10,36,0.8543,0.8793
+3,val_loss patience 25,103,0.8607,0.8741
+3,val_auc patience 10,122,0.8617,0.8717
+3,val_auc patience 25,140,0.862,0.8693
+3,max test AUC (NOT FAIR),21,0.862,0.8796
+4,val_loss patience 10,39,0.8547,0.879
+4,val_loss patience 25,118,0.8609,0.8726
+4,val_auc patience 10,111,0.8612,0.874
+4,val_auc patience 25,141,0.8625,0.8703
+4,max test AUC (NOT FAIR),23,0.8625,0.8796

@@ -1,0 +1,20 @@
+{
+  "baseline (reported model)": {
+    "dropout": 0.2,
+    "monitor": "val_auc",
+    "patience": 25.0,
+    "stopped_at": 107,
+    "restored_epoch": 82,
+    "val_auc": 0.8637,
+    "test_auc": 0.8598
+  },
+  "selected by validation AUC": {
+    "dropout": 0.3,
+    "monitor": "val_auc",
+    "patience": 10.0,
+    "stopped_at": 109,
+    "restored_epoch": 99,
+    "val_auc": 0.8643,
+    "test_auc": 0.8631
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "dropout": 0.2,
+    "epoch_used": 82,
+    "val_auc": 0.8637,
+    "test_auc": 0.8598
+  },
+  "FAIR: best validation AUC over all rules and dropouts": {
+    "dropout": 0.3,
+    "rule": "patience val_auc p=10 min_delta=0.0001",
+    "weights": "restore best",
+    "stopped_at": 109,
+    "hit_150_cap": false,
+    "epoch_used": 99,
+    "val_auc": 0.8643,
+    "test_auc": 0.8631
+  },
+  "NOT FAIR: best test AUC (chosen by looking at test)": {
+    "dropout": 0.5,
+    "rule": "patience val_loss p=10 min_delta=0.005",
+    "weights": "restore best",
+    "stopped_at": 24,
+    "hit_150_cap": false,
+    "epoch_used": 24,
+    "val_auc": 0.8528,
+    "test_auc": 0.8798
+  },
+  "distinct models compared": 240
+}

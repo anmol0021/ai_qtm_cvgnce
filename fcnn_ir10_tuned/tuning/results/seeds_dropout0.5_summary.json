@@ -1,0 +1,37 @@
+[
+  {
+    "rule": "max test AUC (NOT FAIR)",
+    "mean": 0.8797,
+    "std": 0.0001,
+    "min": 0.8796,
+    "max": 0.8799
+  },
+  {
+    "rule": "val_auc patience 10",
+    "mean": 0.8732,
+    "std": 0.0018,
+    "min": 0.8709,
+    "max": 0.8749
+  },
+  {
+    "rule": "val_auc patience 25",
+    "mean": 0.8693,
+    "std": 0.0009,
+    "min": 0.8683,
+    "max": 0.8703
+  },
+  {
+    "rule": "val_loss patience 10",
+    "mean": 0.8785,
+    "std": 0.0008,
+    "min": 0.8775,
+    "max": 0.8793
+  },
+  {
+    "rule": "val_loss patience 25",
+    "mean": 0.875,
+    "std": 0.0018,
+    "min": 0.8726,
+    "max": 0.8773
+  }
+]

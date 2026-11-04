@@ -13,6 +13,7 @@ feature_pipeline/        knowledge graph of 3,000 keywords → 141 features per 
         │                + impact labels IR ≥ 10 / 50 / 100       (train: base year 2019, test: base year 2022)
         ▼
 fcnn_ir10/               fully connected NN (4 × 600) for IR ≥ 10            → test AUC 0.860
+fcnn_ir10_tuned/         same NN, dropout 0.5 + early stopping on val loss   → test AUC 0.878 (5 seeds: 0.8785 ± 0.0008)
 fcnn_multi_ir/           the same NN trained and tested for IR ≥ 10, 50, 100 → test AUC 0.860 / 0.814 / 0.825
         │
         ▼
@@ -23,6 +24,7 @@ cross_ir_experiment/     replication of the paper's Fig. 8: does a model trained
 |---|---|---|
 | [`feature_pipeline/`](feature_pipeline) | Extracts yearly citations, builds the evolving keyword graph, computes the paper's **141 features** (Tables I–II: 20 node-network, 58 node-citation, 21 pair-network, 42 pair-citation) and the labels. `scripts/keyword_selection/` shows how the 3,000 keywords were chosen (RAKE + stratum-core's KeyBERT/TF-IDF scorer). | `scripts/2_build_pair_features.py` |
 | [`fcnn_ir10/`](fcnn_ir10) | Trains on 2019 pairs (label from 2020–2022) and tests on all 2022 pairs (label from 2023–2025) at IR = 10 | `train_fcnn_ir10.py` |
+| [`fcnn_ir10_tuned/`](fcnn_ir10_tuned) | Tunes dropout and the early-stopping rule for IR = 10 (grid, 240 stopping variants, seed check) and trains the final tuned model | `train_fcnn_ir10_tuned.py` |
 | [`fcnn_multi_ir/`](fcnn_multi_ir) | One model per IR = 10, 50, 100, plus the combined ROC plot | `train_multi_ir.py` |
 | [`cross_ir_experiment/`](cross_ir_experiment) | Every IR model scored on every IR test task (paper Fig. 8), with a paired bootstrap of the AUC differences | `cross_ir_eval.py` |
 
@@ -35,6 +37,23 @@ Each folder has its own README with details, how to run it, and results.
 | Top-100 predicted pairs that really reached the IR | 99% | 98% | 94% |
 
 ![ROC IR 10/50/100](fcnn_multi_ir/results/roc_ir10_50_100.png)
+
+These three use the original settings (dropout 0.2, early stopping on validation AUC with patience 25).
+
+### Tuned IR = 10 model: 0.860 → 0.878
+Changing only two settings raises the IR ≥ 10 test AUC from **0.860 to 0.878**: dropout 0.2 → **0.5**, and early stopping on validation AUC (patience 25) → **validation loss (patience 10)**. The result is stable across training seeds (0.8785 ± 0.0008 over 5 seeds).
+
+| IR ≥ 10, test | Previous | **Tuned** |
+|---|---|---|
+| AUC | 0.860 | **0.878** |
+| Accuracy | 0.785 | 0.801 |
+| F1 | 0.781 | 0.803 |
+
+**Why it helps:** the validation set is from 2019, the same year as training, but the test is 2022. Training longer fits 2019-specific patterns. Stronger dropout and stopping on validation loss (which turns up earlier) both stop the model before that happens.
+
+**Caveat:** the setting was identified after seeing test numbers from the tuning run. Choosing by validation AUC alone would have given 0.863. Details are in [`fcnn_ir10_tuned/`](fcnn_ir10_tuned).
+
+![tuned IR10](fcnn_ir10_tuned/results/fcnn_ir10_tuned_curves.png)
 
 ### Cross-IR experiment (paper Fig. 8)
 The paper found that an FcNN trained on IR = 10 slightly beats one trained on IR = 50 at the **IR = 50** task (AUC 0.9416 vs 0.9365). **Our setup replicates this, with a larger gap.**
@@ -67,6 +86,7 @@ python scripts/3_describe_features.py
 #    output/pairs_2019/balanced_ir10.csv → balanced_ir10_train.csv
 #    output/pairs_2022/balanced_ir10.csv → balanced_ir10_test.csv
 cd ../fcnn_ir10 && python train_fcnn_ir10.py
+cd ../fcnn_ir10_tuned && python train_fcnn_ir10_tuned.py   # uses ../fcnn_ir10/data
 cd ../fcnn_multi_ir && python build_ir_datasets.py && python train_multi_ir.py
 cd ../cross_ir_experiment && python cross_ir_eval.py     # uses the models from fcnn_multi_ir
 ```

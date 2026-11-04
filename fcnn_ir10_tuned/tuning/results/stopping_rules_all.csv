@@ -1,0 +1,241 @@
+dropout,rule,weights,stopped_at,hit_150_cap,epoch_used,val_auc,test_auc
+0.0,patience val_auc p=1 min_delta=0.0001,restore best,6,False,6,0.852,0.8793
+0.0,patience val_loss p=1 min_delta=0.0001,no restore,7,False,7,0.8533,0.8783
+0.0,patience val_auc p=1 min_delta=0.001,restore best,5,False,5,0.8519,0.8782
+0.0,patience val_loss p=1 min_delta=0.001,restore best,3,False,3,0.8493,0.878
+0.0,patience val_auc p=1 min_delta=0.005,restore best,2,False,2,0.847,0.8789
+0.0,patience val_auc p=2 min_delta=0.0001,restore best,16,False,14,0.8573,0.8763
+0.0,patience val_auc p=2 min_delta=0.0001,no restore,16,False,16,0.8561,0.8748
+0.0,patience val_loss p=2 min_delta=0.001,restore best,8,False,8,0.8533,0.8769
+0.0,patience val_loss p=2 min_delta=0.005,restore best,4,False,4,0.8511,0.8782
+0.0,patience val_auc p=3 min_delta=0.0001,no restore,17,False,17,0.8566,0.8767
+0.0,patience val_auc p=5 min_delta=0.0001,restore best,36,False,31,0.8603,0.8673
+0.0,patience val_auc p=5 min_delta=0.0001,no restore,36,False,36,0.8561,0.8538
+0.0,patience val_loss p=5 min_delta=0.0001,restore best,24,False,19,0.8588,0.8731
+0.0,patience val_loss p=5 min_delta=0.0001,no restore,24,False,24,0.8594,0.8719
+0.0,patience val_loss p=5 min_delta=0.005,restore best,11,False,10,0.8544,0.8773
+0.0,patience val_loss p=5 min_delta=0.005,no restore,11,False,11,0.8551,0.8774
+0.0,patience val_auc p=10 min_delta=0.0001,no restore,41,False,41,0.8551,0.8567
+0.0,patience val_loss p=10 min_delta=0.0001,no restore,29,False,29,0.859,0.8701
+0.0,patience val_auc p=10 min_delta=0.001,restore best,29,False,26,0.8596,0.8721
+0.0,patience val_auc p=25 min_delta=0.0001,no restore,56,False,56,0.8545,0.843
+0.0,patience val_loss p=25 min_delta=0.0001,no restore,44,False,44,0.8553,0.8499
+0.0,patience val_auc p=25 min_delta=0.005,no restore,49,False,49,0.8517,0.8441
+0.0,patience val_auc p=50 min_delta=0.0001,no restore,81,False,81,0.8461,0.8333
+0.0,patience val_loss p=50 min_delta=0.0001,no restore,69,False,69,0.848,0.8259
+0.0,patience val_auc p=50 min_delta=0.005,no restore,74,False,74,0.8408,0.8124
+0.0,smoothed(5) val_auc p=5,restore best,32,False,27,0.8594,0.8701
+0.0,smoothed(5) val_auc p=5,no restore,32,False,32,0.8584,0.8618
+0.0,smoothed(5) val_auc p=10,restore best,43,False,33,0.8595,0.8642
+0.0,smoothed(5) val_auc p=10,no restore,43,False,43,0.8532,0.8513
+0.0,smoothed(5) val_auc p=25,no restore,58,False,58,0.8546,0.8446
+0.0,GL alpha=1,no restore,22,False,22,0.8583,0.8721
+0.0,GL alpha=10,no restore,59,False,59,0.8445,0.8318
+0.0,PQ alpha=0.25,no restore,35,False,35,0.8555,0.859
+0.0,PQ alpha=0.5,no restore,55,False,55,0.853,0.8431
+0.0,PQ alpha=1,no restore,80,False,80,0.8406,0.821
+0.0,PQ alpha=2,no restore,90,False,90,0.8404,0.8018
+0.0,UP s=1,no restore,25,False,25,0.8553,0.8707
+0.0,UP s=2,no restore,40,False,40,0.8567,0.8588
+0.0,UP s=3,no restore,75,False,75,0.8453,0.8186
+0.0,fixed 20 epochs,no restore,20,False,20,0.8586,0.8718
+0.0,fixed 30 epochs,no restore,30,False,30,0.8567,0.8604
+0.0,fixed 50 epochs,no restore,50,False,50,0.8528,0.845
+0.0,fixed 100 epochs,no restore,100,False,100,0.8367,0.8088
+0.0,fixed 150 epochs,no restore,150,False,150,0.8282,0.7965
+0.1,patience val_auc p=1 min_delta=0.0001,restore best,6,False,5,0.8507,0.8766
+0.1,patience val_auc p=1 min_delta=0.0001,no restore,6,False,6,0.8506,0.8782
+0.1,patience val_loss p=1 min_delta=0.0001,restore best,4,False,4,0.8496,0.8787
+0.1,patience val_auc p=1 min_delta=0.005,restore best,3,False,3,0.8487,0.878
+0.1,patience val_auc p=2 min_delta=0.0001,restore best,16,False,14,0.8551,0.8775
+0.1,patience val_auc p=2 min_delta=0.0001,no restore,16,False,16,0.8545,0.8777
+0.1,patience val_loss p=2 min_delta=0.0001,restore best,13,False,11,0.8537,0.8792
+0.1,patience val_loss p=2 min_delta=0.0001,no restore,13,False,13,0.8537,0.8788
+0.1,patience val_loss p=2 min_delta=0.001,no restore,12,False,12,0.854,0.8786
+0.1,patience val_auc p=3 min_delta=0.0001,no restore,17,False,17,0.855,0.8778
+0.1,patience val_auc p=5 min_delta=0.0001,restore best,40,False,35,0.8611,0.8727
+0.1,patience val_auc p=5 min_delta=0.0001,no restore,40,False,40,0.8604,0.8709
+0.1,patience val_auc p=5 min_delta=0.001,restore best,31,False,31,0.8593,0.8739
+0.1,patience val_loss p=5 min_delta=0.001,restore best,23,False,23,0.8574,0.8764
+0.1,patience val_auc p=10 min_delta=0.0001,no restore,45,False,45,0.8598,0.8683
+0.1,patience val_auc p=10 min_delta=0.001,no restore,43,False,43,0.8603,0.8705
+0.1,patience val_auc p=25 min_delta=0.0001,restore best,86,False,61,0.8627,0.8605
+0.1,patience val_auc p=25 min_delta=0.0001,no restore,86,False,86,0.8568,0.8448
+0.1,patience val_loss p=25 min_delta=0.0001,no restore,60,False,60,0.8606,0.8592
+0.1,patience val_auc p=25 min_delta=0.001,no restore,74,False,74,0.8606,0.855
+0.1,patience val_auc p=50 min_delta=0.0001,no restore,111,False,111,0.8484,0.8277
+0.1,patience val_loss p=50 min_delta=0.0001,no restore,85,False,85,0.8583,0.8404
+0.1,patience val_auc p=50 min_delta=0.001,no restore,99,False,99,0.8576,0.8421
+0.1,smoothed(5) val_auc p=10,restore best,60,False,58,0.8612,0.8621
+0.1,smoothed(5) val_auc p=25,restore best,89,False,64,0.8626,0.8595
+0.1,smoothed(5) val_auc p=25,no restore,89,False,89,0.8586,0.8456
+0.1,GL alpha=1,no restore,36,False,36,0.8588,0.8737
+0.1,GL alpha=2,no restore,69,False,69,0.8603,0.8626
+0.1,GL alpha=5,no restore,92,False,92,0.8594,0.8453
+0.1,GL alpha=10,no restore,110,False,110,0.8557,0.8393
+0.1,PQ alpha=1,no restore,105,False,105,0.8557,0.8376
+0.1,PQ alpha=2,no restore,125,False,125,0.8516,0.8265
+0.1,UP s=3,no restore,80,False,80,0.8608,0.8478
+0.1,fixed 10 epochs,no restore,10,False,10,0.8536,0.8776
+0.1,fixed 20 epochs,no restore,20,False,20,0.8569,0.8761
+0.1,fixed 30 epochs,no restore,30,False,30,0.8586,0.8739
+0.1,fixed 50 epochs,no restore,50,False,50,0.8604,0.87
+0.1,fixed 75 epochs,no restore,75,False,75,0.8593,0.851
+0.1,fixed 100 epochs,no restore,100,False,100,0.8547,0.8352
+0.1,fixed 150 epochs,no restore,150,False,150,0.8487,0.8064
+0.2,patience val_auc p=1 min_delta=0.0001,restore best,6,False,5,0.85,0.8775
+0.2,patience val_auc p=1 min_delta=0.0001,no restore,6,False,6,0.8496,0.8784
+0.2,patience val_loss p=1 min_delta=0.0001,no restore,7,False,7,0.8507,0.8785
+0.2,patience val_auc p=1 min_delta=0.001,restore best,4,False,4,0.8485,0.8787
+0.2,patience val_auc p=1 min_delta=0.005,restore best,3,False,3,0.848,0.8784
+0.2,patience val_auc p=2 min_delta=0.0001,restore best,12,False,12,0.8528,0.8788
+0.2,patience val_loss p=2 min_delta=0.0001,restore best,12,False,10,0.8527,0.8783
+0.2,patience val_auc p=3 min_delta=0.0001,restore best,30,False,30,0.8572,0.8762
+0.2,patience val_loss p=3 min_delta=0.0001,no restore,13,False,13,0.8531,0.8791
+0.2,patience val_auc p=5 min_delta=0.0001,restore best,76,False,71,0.8635,0.8641
+0.2,patience val_auc p=5 min_delta=0.0001,no restore,76,False,76,0.8611,0.8612
+0.2,patience val_loss p=5 min_delta=0.0001,restore best,23,False,23,0.8559,0.8779
+0.2,patience val_loss p=5 min_delta=0.005,no restore,11,False,11,0.8527,0.8787
+0.2,patience val_auc p=10 min_delta=0.0001,no restore,81,False,81,0.8619,0.8597
+0.2,patience val_loss p=10 min_delta=0.0001,restore best,66,False,66,0.8631,0.8675
+0.2,patience val_auc p=10 min_delta=0.001,restore best,59,False,56,0.862,0.8698
+0.2,patience val_auc p=10 min_delta=0.001,no restore,59,False,59,0.8607,0.8687
+0.2,patience val_loss p=10 min_delta=0.001,no restore,62,False,62,0.8612,0.8679
+0.2,patience val_auc p=10 min_delta=0.005,restore best,17,False,17,0.8541,0.8787
+0.2,patience val_loss p=10 min_delta=0.005,restore best,16,False,15,0.8538,0.8785
+0.2,patience val_loss p=10 min_delta=0.005,no restore,16,False,16,0.8535,0.8785
+0.2,patience val_auc p=25 min_delta=0.0001,restore best,107,False,82,0.8637,0.8598
+0.2,patience val_auc p=25 min_delta=0.0001,no restore,107,False,107,0.8613,0.8497
+0.2,patience val_loss p=25 min_delta=0.0001,no restore,96,False,96,0.8609,0.8572
+0.2,patience val_auc p=25 min_delta=0.005,restore best,48,False,48,0.8605,0.8711
+0.2,patience val_loss p=25 min_delta=0.005,restore best,43,False,41,0.8593,0.8757
+0.2,patience val_loss p=25 min_delta=0.005,no restore,43,False,43,0.8584,0.8734
+0.2,patience val_auc p=50 min_delta=0.0001,no restore,132,False,132,0.8591,0.8386
+0.2,patience val_loss p=50 min_delta=0.0001,no restore,121,False,121,0.8618,0.8458
+0.2,patience val_auc p=50 min_delta=0.005,no restore,99,False,99,0.8613,0.852
+0.2,patience val_loss p=50 min_delta=0.005,no restore,94,False,94,0.8614,0.8568
+0.2,smoothed(5) val_auc p=5,restore best,63,False,58,0.8617,0.8697
+0.2,smoothed(5) val_auc p=5,no restore,63,False,63,0.862,0.8681
+0.2,smoothed(5) val_auc p=10,restore best,77,False,67,0.8629,0.8659
+0.2,smoothed(5) val_auc p=10,no restore,77,False,77,0.862,0.8598
+0.2,GL alpha=1,no restore,72,False,72,0.8607,0.8625
+0.2,GL alpha=2,no restore,101,False,101,0.8586,0.8475
+0.2,GL alpha=5,no restore,129,False,129,0.8576,0.8414
+0.2,GL alpha=10,no restore,150,True,150,0.8556,0.8286
+0.2,PQ alpha=0.25,restore best,45,False,44,0.8598,0.873
+0.2,PQ alpha=0.25,no restore,45,False,45,0.8587,0.873
+0.2,PQ alpha=0.5,no restore,115,False,115,0.8598,0.8408
+0.2,PQ alpha=1,no restore,125,False,125,0.8587,0.8429
+0.2,UP s=1,restore best,40,False,37,0.8588,0.8761
+0.2,UP s=1,no restore,40,False,40,0.8589,0.8743
+0.2,UP s=3,no restore,85,False,85,0.8623,0.8564
+0.2,UP s=4,no restore,90,False,90,0.8628,0.8564
+0.2,fixed 20 epochs,no restore,20,False,20,0.8554,0.8771
+0.2,fixed 50 epochs,no restore,50,False,50,0.8599,0.8742
+0.2,fixed 75 epochs,no restore,75,False,75,0.862,0.8612
+0.2,fixed 100 epochs,no restore,100,False,100,0.8604,0.8522
+0.3,patience val_auc p=1 min_delta=0.0001,restore best,6,False,6,0.8492,0.8784
+0.3,patience val_loss p=1 min_delta=0.0001,no restore,7,False,7,0.8499,0.8787
+0.3,patience val_auc p=1 min_delta=0.001,restore best,4,False,4,0.8476,0.8786
+0.3,patience val_auc p=1 min_delta=0.005,restore best,3,False,3,0.847,0.8787
+0.3,patience val_auc p=2 min_delta=0.0001,restore best,16,False,15,0.8529,0.8789
+0.3,patience val_auc p=2 min_delta=0.0001,no restore,16,False,16,0.8525,0.8793
+0.3,patience val_loss p=2 min_delta=0.0001,restore best,16,False,14,0.8529,0.8791
+0.3,patience val_loss p=2 min_delta=0.001,restore best,12,False,12,0.8523,0.8789
+0.3,patience val_auc p=3 min_delta=0.0001,restore best,30,False,27,0.8559,0.8784
+0.3,patience val_auc p=3 min_delta=0.0001,no restore,30,False,30,0.8559,0.8777
+0.3,patience val_loss p=3 min_delta=0.0001,restore best,23,False,20,0.8543,0.8784
+0.3,patience val_loss p=3 min_delta=0.0001,no restore,23,False,23,0.8545,0.8788
+0.3,patience val_auc p=3 min_delta=0.001,restore best,13,False,13,0.8524,0.8791
+0.3,patience val_auc p=3 min_delta=0.005,restore best,5,False,5,0.8492,0.8783
+0.3,patience val_loss p=3 min_delta=0.005,restore best,8,False,8,0.8508,0.8788
+0.3,patience val_auc p=5 min_delta=0.0001,restore best,76,False,71,0.8627,0.8697
+0.3,patience val_auc p=5 min_delta=0.0001,no restore,76,False,76,0.8616,0.8689
+0.3,patience val_loss p=5 min_delta=0.0001,restore best,42,False,37,0.8576,0.8772
+0.3,patience val_loss p=5 min_delta=0.0001,no restore,42,False,42,0.8577,0.8773
+0.3,patience val_loss p=5 min_delta=0.001,restore best,19,False,19,0.8538,0.8789
+0.3,patience val_loss p=5 min_delta=0.005,restore best,10,False,10,0.8519,0.8787
+0.3,patience val_auc p=10 min_delta=0.0001,restore best,109,False,99,0.8643,0.8631
+0.3,patience val_auc p=10 min_delta=0.0001,no restore,109,False,109,0.8641,0.8596
+0.3,patience val_loss p=10 min_delta=0.0001,no restore,81,False,81,0.8619,0.867
+0.3,patience val_auc p=10 min_delta=0.001,restore best,59,False,57,0.8605,0.8731
+0.3,patience val_auc p=10 min_delta=0.001,no restore,59,False,59,0.8598,0.8742
+0.3,patience val_auc p=10 min_delta=0.005,restore best,17,False,17,0.8533,0.8791
+0.3,patience val_loss p=10 min_delta=0.005,no restore,24,False,24,0.8541,0.8793
+0.3,patience val_auc p=25 min_delta=0.0001,no restore,124,False,124,0.8626,0.8537
+0.3,patience val_auc p=25 min_delta=0.001,no restore,107,False,107,0.8634,0.862
+0.3,patience val_auc p=25 min_delta=0.005,restore best,50,False,49,0.8597,0.8757
+0.3,patience val_auc p=25 min_delta=0.005,no restore,50,False,50,0.8594,0.8764
+0.3,patience val_loss p=25 min_delta=0.005,no restore,39,False,39,0.8573,0.8766
+0.3,patience val_auc p=50 min_delta=0.0001,no restore,149,False,149,0.8622,0.8472
+0.3,patience val_auc p=50 min_delta=0.001,no restore,132,False,132,0.8629,0.8528
+0.3,patience val_auc p=50 min_delta=0.005,no restore,102,False,102,0.8637,0.8611
+0.3,patience val_loss p=50 min_delta=0.005,no restore,142,False,142,0.8616,0.8494
+0.3,smoothed(5) val_auc p=10,restore best,103,False,94,0.8633,0.8657
+0.3,smoothed(5) val_auc p=10,no restore,103,False,103,0.8635,0.8628
+0.3,smoothed(5) val_auc p=25,restore best,136,False,111,0.8638,0.859
+0.3,smoothed(5) val_auc p=25,no restore,136,False,136,0.8635,0.8524
+0.3,GL alpha=1,no restore,72,False,72,0.8604,0.8697
+0.3,GL alpha=2,no restore,146,False,146,0.8612,0.8441
+0.3,GL alpha=5,no restore,150,True,150,0.8631,0.8484
+0.3,PQ alpha=0.25,restore best,55,False,54,0.8601,0.8742
+0.3,PQ alpha=0.25,no restore,55,False,55,0.8594,0.8748
+0.3,PQ alpha=0.5,restore best,60,False,58,0.8605,0.8741
+0.3,PQ alpha=0.5,no restore,60,False,60,0.8596,0.873
+0.3,UP s=1,restore best,35,False,31,0.8561,0.8776
+0.3,UP s=1,no restore,35,False,35,0.8569,0.8776
+0.3,UP s=3,no restore,140,False,140,0.8628,0.8526
+0.3,UP s=4,no restore,145,False,145,0.8621,0.8481
+0.3,fixed 75 epochs,no restore,75,False,75,0.8622,0.8694
+0.3,fixed 100 epochs,no restore,100,False,100,0.8629,0.8611
+0.5,patience val_auc p=1 min_delta=0.0001,restore best,11,False,10,0.85,0.8786
+0.5,patience val_auc p=1 min_delta=0.0001,no restore,11,False,11,0.85,0.8784
+0.5,patience val_loss p=1 min_delta=0.0001,restore best,7,False,6,0.8481,0.8784
+0.5,patience val_loss p=1 min_delta=0.0001,no restore,7,False,7,0.8483,0.8787
+0.5,patience val_auc p=1 min_delta=0.005,restore best,3,False,3,0.8446,0.8777
+0.5,patience val_auc p=2 min_delta=0.0001,restore best,16,False,15,0.8513,0.8787
+0.5,patience val_auc p=2 min_delta=0.0001,no restore,16,False,16,0.8512,0.8796
+0.5,patience val_loss p=2 min_delta=0.0001,no restore,17,False,17,0.8517,0.8794
+0.5,patience val_auc p=2 min_delta=0.005,restore best,4,False,4,0.8459,0.8778
+0.5,patience val_auc p=3 min_delta=0.0001,restore best,21,False,18,0.8523,0.8784
+0.5,patience val_auc p=3 min_delta=0.0001,no restore,21,False,21,0.8522,0.879
+0.5,patience val_auc p=3 min_delta=0.005,restore best,8,False,8,0.8491,0.8782
+0.5,patience val_auc p=5 min_delta=0.0001,restore best,74,False,71,0.8585,0.8762
+0.5,patience val_auc p=5 min_delta=0.0001,no restore,74,False,74,0.8579,0.8765
+0.5,patience val_loss p=5 min_delta=0.0001,no restore,20,False,20,0.8522,0.8793
+0.5,patience val_auc p=5 min_delta=0.001,restore best,22,False,22,0.8526,0.879
+0.5,patience val_loss p=5 min_delta=0.001,no restore,19,False,19,0.8518,0.8794
+0.5,patience val_loss p=5 min_delta=0.005,restore best,9,False,9,0.8494,0.8781
+0.5,patience val_auc p=10 min_delta=0.0001,restore best,105,False,95,0.861,0.8749
+0.5,patience val_auc p=10 min_delta=0.0001,no restore,105,False,105,0.8607,0.874
+0.5,patience val_loss p=10 min_delta=0.0001,restore best,59,False,49,0.8558,0.8775
+0.5,patience val_loss p=10 min_delta=0.0001,no restore,59,False,59,0.8568,0.8773
+0.5,patience val_loss p=10 min_delta=0.001,restore best,34,False,31,0.8538,0.8788
+0.5,patience val_loss p=10 min_delta=0.001,no restore,34,False,34,0.8542,0.879
+0.5,patience val_loss p=10 min_delta=0.005,restore best,24,False,24,0.8528,0.8798
+0.5,patience val_auc p=25 min_delta=0.0001,restore best,150,True,150,0.8635,0.8683
+0.5,patience val_loss p=25 min_delta=0.0001,restore best,117,False,92,0.8597,0.8755
+0.5,patience val_loss p=25 min_delta=0.0001,no restore,117,False,117,0.8614,0.8731
+0.5,patience val_auc p=25 min_delta=0.001,restore best,144,False,139,0.8634,0.8703
+0.5,patience val_auc p=25 min_delta=0.001,no restore,144,False,144,0.8625,0.8679
+0.5,patience val_loss p=25 min_delta=0.001,restore best,74,False,70,0.8581,0.8764
+0.5,patience val_auc p=25 min_delta=0.005,restore best,43,False,40,0.8552,0.8786
+0.5,patience val_auc p=25 min_delta=0.005,no restore,43,False,43,0.8551,0.8785
+0.5,patience val_loss p=25 min_delta=0.005,restore best,39,False,36,0.8544,0.8783
+0.5,patience val_loss p=25 min_delta=0.005,no restore,39,False,39,0.8549,0.8783
+0.5,patience val_loss p=50 min_delta=0.0001,restore best,150,True,138,0.8631,0.8705
+0.5,patience val_auc p=50 min_delta=0.005,restore best,111,False,110,0.8613,0.8737
+0.5,patience val_auc p=50 min_delta=0.005,no restore,111,False,111,0.8605,0.8724
+0.5,patience val_loss p=50 min_delta=0.005,no restore,64,False,64,0.8578,0.8773
+0.5,smoothed(5) val_auc p=5,restore best,84,False,79,0.8593,0.8765
+0.5,smoothed(5) val_auc p=5,no restore,84,False,84,0.8589,0.8758
+0.5,GL alpha=0.5,restore best,43,False,42,0.855,0.8785
+0.5,GL alpha=1,no restore,57,False,57,0.8569,0.8775
+0.5,PQ alpha=0.25,no restore,55,False,55,0.8561,0.8782
+0.5,PQ alpha=0.5,no restore,60,False,60,0.8569,0.8779
+0.5,PQ alpha=1,no restore,80,False,80,0.8583,0.8759
+0.5,fixed 5 epochs,no restore,5,False,5,0.8472,0.878
+0.5,fixed 30 epochs,no restore,30,False,30,0.8536,0.8793
+0.5,fixed 50 epochs,no restore,50,False,50,0.8561,0.8783
+0.5,fixed 75 epochs,no restore,75,False,75,0.8586,0.8758
+0.5,fixed 100 epochs,no restore,100,False,100,0.8606,0.873
