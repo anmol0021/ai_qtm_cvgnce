@@ -1,0 +1,33 @@
+{
+  "auc_matrix": {
+    "train10_test10": 0.8598,
+    "train10_test50": 0.8271,
+    "train10_test100": 0.813,
+    "train50_test10": 0.8383,
+    "train50_test50": 0.8137,
+    "train50_test100": 0.7948,
+    "train100_test10": 0.8399,
+    "train100_test50": 0.8309,
+    "train100_test100": 0.8248
+  },
+  "paired_bootstrap": {
+    "test IR50: model IR10 minus model IR50": {
+      "delta_auc": 0.0133,
+      "ci95_low": 0.0095,
+      "ci95_high": 0.0169,
+      "p_a_not_better": 0.0
+    },
+    "test IR100: model IR10 minus model IR100": {
+      "delta_auc": -0.0118,
+      "ci95_low": -0.019,
+      "ci95_high": -0.0043,
+      "p_a_not_better": 0.999
+    },
+    "test IR100: model IR50 minus model IR100": {
+      "delta_auc": -0.03,
+      "ci95_low": -0.0369,
+      "ci95_high": -0.0233,
+      "p_a_not_better": 1.0
+    }
+  }
+}
