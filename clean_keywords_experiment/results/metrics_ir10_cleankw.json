@@ -1,0 +1,26 @@
+{
+  "impact_range": 10,
+  "train_rows": 27936,
+  "val_rows": 4930,
+  "test_rows": 36431,
+  "trainable_parameters": 1167601,
+  "epochs_run": 65,
+  "dropout": 0.5,
+  "early_stopping": "val_loss, patience 10",
+  "best_epoch": 59,
+  "val_loss": 0.3449,
+  "val_auc": 0.9248,
+  "test_auc": 0.9436,
+  "test_accuracy": 0.8719,
+  "test_precision": 0.8438,
+  "test_recall": 0.9126,
+  "test_f1": 0.8769,
+  "confusion_matrix": {
+    "TN": 15144,
+    "FP": 3077,
+    "FN": 1591,
+    "TP": 16619
+  },
+  "test_TPR_at_FPR_0.1": 0.8459,
+  "test_TPR_at_FPR_0.3": 0.9583
+}

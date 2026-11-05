@@ -210,6 +210,7 @@ def pair_features(u, v, S, NODE):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--keywords", default=os.path.join(OUT, "top3000_keywords.csv"))
+    ap.add_argument("--out", default=OUT, help="output folder (citations are always read from output/_work)")
     ap.add_argument("--years", default="2019,2022", help="base years y (label window y+1..y+3)")
     ap.add_argument("--chunk", type=int, default=60, help="u-nodes per parquet part")
     ap.add_argument("--seed", type=int, default=42)
@@ -224,7 +225,8 @@ def main():
     print(f"{len(kw)} keywords, {len(pap)} papers")
 
     M = build_incidence(pap["text"].tolist(), kw)
-    sp.save_npz(os.path.join(OUT, "_work", "paper_keyword_incidence.npz"), M)
+    OUTD = args.out; os.makedirs(os.path.join(OUTD, "_work"), exist_ok=True)
+    sp.save_npz(os.path.join(OUTD, "_work", "paper_keyword_incidence.npz"), M)
     dfreq = np.asarray(M.sum(0)).ravel()
     print(f"incidence built: {int(M.sum())} mentions; keywords present in corpus: {(dfreq > 0).sum()}/{len(kw)}"
           f"; papers with >=2 keywords: {(np.asarray(M.sum(1)).ravel() >= 2).sum()}  [{time.time()-t0:.0f}s]")
@@ -254,7 +256,7 @@ def main():
               f"{int((Wcnt[iu, ju][unconn] > 0).sum())}; IR>=10: {pos10}, IR>=50: {int((imp_all>=50).sum())}, "
               f"IR>=100: {int((imp_all>=100).sum())}")
 
-        odir = os.path.join(OUT, f"pairs_{y}"); fdir = os.path.join(odir, "features_full")
+        odir = os.path.join(OUTD, f"pairs_{y}"); fdir = os.path.join(odir, "features_full")
         os.makedirs(fdir, exist_ok=True)
         for f in os.listdir(fdir): os.remove(os.path.join(fdir, f))
         bal_path = os.path.join(odir, "balanced_ir10.csv")
@@ -289,8 +291,8 @@ def main():
     # feature dictionary (index -> name -> paper group)
     groups = ["node_network"] * 20 + ["node_citation"] * 58 + ["pair_network"] * 21 + ["pair_citation"] * 42
     pd.DataFrame({"index": range(141), "feature": names, "group": groups}).to_csv(
-        os.path.join(OUT, "feature_dictionary.csv"), index=False)
-    json.dump(summary, open(os.path.join(OUT, "pairs_summary.json"), "w"), indent=2)
+        os.path.join(OUTD, "feature_dictionary.csv"), index=False)
+    json.dump(summary, open(os.path.join(OUTD, "pairs_summary.json"), "w"), indent=2)
     print("\nsummary:", json.dumps(summary, indent=1), f"\ndone in {time.time()-t0:.0f}s")
 
 

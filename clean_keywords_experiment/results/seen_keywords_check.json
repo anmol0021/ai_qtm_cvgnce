@@ -1,0 +1,20 @@
+{
+  "clean keywords": {
+    "keywords": 3973,
+    "keywords_without_paper_by_2022": 1394,
+    "test_pairs": 36431,
+    "share_pairs_with_unseen_keyword": 0.349,
+    "positive_share_among_those": 0.168,
+    "auc_all": 0.9436,
+    "auc_both_keywords_seen": 0.9226
+  },
+  "top-3000 keywords": {
+    "keywords": 3000,
+    "keywords_without_paper_by_2022": 172,
+    "test_pairs": 86316,
+    "share_pairs_with_unseen_keyword": 0.099,
+    "positive_share_among_those": 0.415,
+    "auc_all": 0.8775,
+    "auc_both_keywords_seen": 0.8849
+  }
+}

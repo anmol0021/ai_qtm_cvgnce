@@ -24,6 +24,7 @@ python scripts/4_sanity_check.py               # optional: data checks + quick A
 Step 2 options:
 - `--years 2019,2022`: base years.
 - `--keywords <csv>`: any CSV with a `keyword` column.
+- `--out <folder>`: where to write the outputs (default `output/`; citations are always read from `output/_work/`). Used by `../clean_keywords_experiment`.
 - `--chunk 60`
 
 This means you can rebuild the features for a different keyword list (e.g. a curated one) or different years.

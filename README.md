@@ -14,6 +14,7 @@ feature_pipeline/        knowledge graph of 3,000 keywords → 141 features per 
         ▼
 fcnn_ir10/               fully connected NN (4 × 600) for IR ≥ 10            → test AUC 0.860
 fcnn_ir10_tuned/         same NN, dropout 0.5 + early stopping on val loss   → test AUC 0.878 (5 seeds: 0.8785 ± 0.0008)
+clean_keywords_experiment/  tuned NN on features from a hand-cleaned keyword list → test AUC 0.944 (0.923 on comparable pairs)
 fcnn_multi_ir/           the same NN trained and tested for IR ≥ 10, 50, 100 → test AUC 0.860 / 0.814 / 0.825
         │
         ▼
@@ -25,6 +26,7 @@ cross_ir_experiment/     replication of the paper's Fig. 8: does a model trained
 | [`feature_pipeline/`](feature_pipeline) | Extracts yearly citations, builds the evolving keyword graph, computes the paper's **141 features** (Tables I–II: 20 node-network, 58 node-citation, 21 pair-network, 42 pair-citation) and the labels. `scripts/keyword_selection/` shows how the 3,000 keywords were chosen (RAKE + stratum-core's KeyBERT/TF-IDF scorer). | `scripts/2_build_pair_features.py` |
 | [`fcnn_ir10/`](fcnn_ir10) | Trains on 2019 pairs (label from 2020–2022) and tests on all 2022 pairs (label from 2023–2025) at IR = 10 | `train_fcnn_ir10.py` |
 | [`fcnn_ir10_tuned/`](fcnn_ir10_tuned) | Tunes dropout and the early-stopping rule for IR = 10 (grid, 240 stopping variants, seed check) and trains the final tuned model | `train_fcnn_ir10_tuned.py` |
+| [`clean_keywords_experiment/`](clean_keywords_experiment) | Rebuilds the 141 features with a hand-cleaned list of 3,973 keywords and trains the tuned IR-10 model on them, plus a check of how much AUC comes from never-seen keywords | `train_fcnn_ir10_cleankw.py` |
 | [`fcnn_multi_ir/`](fcnn_multi_ir) | One model per IR = 10, 50, 100, plus the combined ROC plot | `train_multi_ir.py` |
 | [`cross_ir_experiment/`](cross_ir_experiment) | Every IR model scored on every IR test task (paper Fig. 8), with a paired bootstrap of the AUC differences | `cross_ir_eval.py` |
 
@@ -54,6 +56,19 @@ Changing only two settings raises the IR ≥ 10 test AUC from **0.860 to 0.878**
 **Caveat:** the setting was identified after seeing test numbers from the tuning run. Choosing by validation AUC alone would have given 0.863. Details are in [`fcnn_ir10_tuned/`](fcnn_ir10_tuned).
 
 ![tuned IR10](fcnn_ir10_tuned/results/fcnn_ir10_tuned_curves.png)
+
+### Clean keyword list: 0.878 → 0.944 (0.923 on comparable pairs)
+Rebuilding the features with a hand-cleaned list of 3,973 AI × Quantum keywords, and training the same tuned model, gives **test AUC 0.944** for IR ≥ 10.
+
+| IR ≥ 10, test AUC | Top-3000 keywords | **Clean keywords** |
+|---|---|---|
+| All test pairs | 0.878 | **0.944** |
+| Pairs where both keywords have a paper by 2022 | 0.885 | **0.923** |
+
+- **Part of the jump is an easier test set.** 1,051 of the clean keywords never appear in the corpus. 35% of its test pairs contain a keyword with no paper by 2022 (10% for the top-3000 list). Those pairs have almost all-zero features and are mostly negative, so they're easy to rank.
+- **On comparable pairs the clean list is still clearly better** (0.923 vs 0.885). We suggest reporting 0.923, or removing unseen keywords before building pairs.
+
+Details are in [`clean_keywords_experiment/`](clean_keywords_experiment).
 
 ### Cross-IR experiment (paper Fig. 8)
 The paper found that an FcNN trained on IR = 10 slightly beats one trained on IR = 50 at the **IR = 50** task (AUC 0.9416 vs 0.9365). **Our setup replicates this, with a larger gap.**
@@ -87,6 +102,7 @@ python scripts/3_describe_features.py
 #    output/pairs_2022/balanced_ir10.csv → balanced_ir10_test.csv
 cd ../fcnn_ir10 && python train_fcnn_ir10.py
 cd ../fcnn_ir10_tuned && python train_fcnn_ir10_tuned.py   # uses ../fcnn_ir10/data
+# clean-keyword variant: see clean_keywords_experiment/README.md (2_build_pair_features.py --keywords ... --out ...)
 cd ../fcnn_multi_ir && python build_ir_datasets.py && python train_multi_ir.py
 cd ../cross_ir_experiment && python cross_ir_eval.py     # uses the models from fcnn_multi_ir
 ```
@@ -96,6 +112,7 @@ cd ../cross_ir_experiment && python cross_ir_eval.py     # uses the models from 
 - **Generated pair datasets:** CSVs of 80–90 MB, and about 1 GB of Parquet.
 - **Trained model weights.**
 - **The 300 anchor papers file:** it's a Web of Science export and can't be redistributed.
+- **The clean keyword list** (`keywords_quantum_ai_clean_final.csv`) used in `clean_keywords_experiment/`.
 
 The repo does include the 3,000 keywords (`feature_pipeline/output/top3000_keywords.csv`) and the feature dictionary.
 
