@@ -1,0 +1,5 @@
+model,test_set,rows,AUC,AUC_both_keywords_seen,accuracy,precision,recall,f1,TN,FP,FN,TP,top100_hit_rate,top1000_hit_rate
+clean-kw model,"old test (top-3000, 86k)",86316,0.8516,0.8695,0.7113,0.6503,0.9134,0.7597,22003,21182,3736,39395,0.98,0.99
+top3000 model,"old test (top-3000, 86k)",86316,0.8775,0.8849,0.8009,0.7948,0.811,0.8028,34151,9034,8150,34981,0.99,0.989
+clean-kw model,"new test (clean-kw, 36k)",36431,0.9436,0.9226,0.8719,0.8438,0.9126,0.8769,15144,3077,1591,16619,1.0,0.998
+top3000 model,"new test (clean-kw, 36k)",36431,0.9314,0.9203,0.8668,0.859,0.8775,0.8681,15597,2624,2230,15980,1.0,0.996

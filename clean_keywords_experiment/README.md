@@ -1,4 +1,4 @@
-# Clean keyword list: test AUC 0.944 (0.923 on comparable pairs)
+# Clean keyword list: test AUC 0.944 on its own (easier) test set
 
 The same pipeline and model, run on a different vocabulary: a hand-cleaned list of **3,973 AI × Quantum keywords** (`keywords_quantum_ai_clean_final.csv`: 3,628 cleaned from the original extraction plus 345 added terms such as *quantum transformer*, *quantum LSTM*, *quantum k-means*).
 
@@ -19,12 +19,22 @@ The same pipeline and model, run on a different vocabulary: a hand-cleaned list 
 
 ![clean keywords](results/fcnn_ir10_cleankw_curves.png)
 
-## Where the improvement comes from
-- **Part of it is an easier test set.** 35% of the clean-list test pairs contain a keyword with no paper by 2022 (10% for the top-3000 list). Those pairs have almost all-zero features and are mostly negative (only 17% positive), so they're easy to rank. Removing them lowers the AUC from 0.944 to **0.923**.
-- **Most of the rest is a real gain.** On comparable pairs (both keywords seen), the clean list gives 0.923 against 0.885, about **+0.04**. The cleaner, more focused vocabulary makes the graph and citation features more informative.
-- **Caveat:** different keyword lists produce different pairs, so the two test sets aren't the same. The comparison is indicative, not a paired test. The clean-list number is also one seed.
+## Where the improvement comes from: mostly an easier test set
+- **Unseen keywords make many test pairs easy.** 35% of the clean-list test pairs contain a keyword with no paper by 2022 (10% for the top-3000 list). Those pairs have almost all-zero features and are mostly negative (only 17% positive), so they're easy to rank. Removing them lowers the AUC from 0.944 to **0.923**.
+- **The clean-list test set is easier as a whole.** A paired test in [`../cross_dataset_experiment`](../cross_dataset_experiment) scores both models on both test sets:
 
-**Recommendation:** remove keywords with no paper by the training base year before building pairs. The "both keywords seen" AUC (0.923) is the more honest number to report.
+  | Model ↓ / test set → | top-3000 test (86k) | clean test (36k) |
+  |---|---|---|
+  | clean-kw model | 0.852 | 0.944 |
+  | top3000 model | **0.878** | 0.931 |
+
+  - The top3000 model, which never saw the clean keywords, already gets 0.931 on the clean test set.
+  - On comparable pairs there, the two models are almost equal (0.923 vs 0.920).
+  - On the larger top-3000 test set, the clean-kw model is 0.026 *worse*.
+  - So the jump to 0.944 doesn't mean the model got better. *(An earlier version of this README called 0.923 vs 0.885 a "real +0.04 gain". That compared two different test sets and is withdrawn.)*
+- **The clean-kw model still learned a real, transferable signal:** 0.852 on 86k pairs from a vocabulary it never saw, with 99% of its top-1000 predictions correct.
+
+**Recommendation:** remove keywords with no paper by the training base year before building pairs. Compare models on the same test set: 0.944 and 0.878 come from different test sets and aren't comparable.
 
 ## Run
 ```

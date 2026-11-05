@@ -1,0 +1,88 @@
+{
+  "results": [
+    {
+      "model": "clean-kw model",
+      "test_set": "old test (top-3000, 86k)",
+      "rows": 86316,
+      "AUC": 0.8516,
+      "AUC_both_keywords_seen": 0.8695,
+      "accuracy": 0.7113,
+      "precision": 0.6503,
+      "recall": 0.9134,
+      "f1": 0.7597,
+      "TN": 22003,
+      "FP": 21182,
+      "FN": 3736,
+      "TP": 39395,
+      "top100_hit_rate": 0.98,
+      "top1000_hit_rate": 0.99
+    },
+    {
+      "model": "top3000 model",
+      "test_set": "old test (top-3000, 86k)",
+      "rows": 86316,
+      "AUC": 0.8775,
+      "AUC_both_keywords_seen": 0.8849,
+      "accuracy": 0.8009,
+      "precision": 0.7948,
+      "recall": 0.811,
+      "f1": 0.8028,
+      "TN": 34151,
+      "FP": 9034,
+      "FN": 8150,
+      "TP": 34981,
+      "top100_hit_rate": 0.99,
+      "top1000_hit_rate": 0.989
+    },
+    {
+      "model": "clean-kw model",
+      "test_set": "new test (clean-kw, 36k)",
+      "rows": 36431,
+      "AUC": 0.9436,
+      "AUC_both_keywords_seen": 0.9226,
+      "accuracy": 0.8719,
+      "precision": 0.8438,
+      "recall": 0.9126,
+      "f1": 0.8769,
+      "TN": 15144,
+      "FP": 3077,
+      "FN": 1591,
+      "TP": 16619,
+      "top100_hit_rate": 1.0,
+      "top1000_hit_rate": 0.998
+    },
+    {
+      "model": "top3000 model",
+      "test_set": "new test (clean-kw, 36k)",
+      "rows": 36431,
+      "AUC": 0.9314,
+      "AUC_both_keywords_seen": 0.9203,
+      "accuracy": 0.8668,
+      "precision": 0.859,
+      "recall": 0.8775,
+      "f1": 0.8681,
+      "TN": 15597,
+      "FP": 2624,
+      "FN": 2230,
+      "TP": 15980,
+      "top100_hit_rate": 1.0,
+      "top1000_hit_rate": 0.996
+    }
+  ],
+  "paired_bootstrap": {
+    "old test (top-3000, 86k): clean-kw model minus top3000 model": {
+      "delta_auc": -0.026,
+      "ci95": [
+        -0.0271,
+        -0.0249
+      ]
+    },
+    "new test (clean-kw, 36k): clean-kw model minus top3000 model": {
+      "delta_auc": 0.0121,
+      "ci95": [
+        0.0108,
+        0.0136
+      ]
+    }
+  }
+}
