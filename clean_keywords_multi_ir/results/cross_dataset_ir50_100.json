@@ -1,0 +1,90 @@
+{
+  "results": [
+    {
+      "IR": 50,
+      "model": "clean model",
+      "test_set": "clean test",
+      "rows": 7060,
+      "AUC": 0.9265
+    },
+    {
+      "IR": 50,
+      "model": "top3000 model",
+      "test_set": "clean test",
+      "rows": 7060,
+      "AUC": 0.9085
+    },
+    {
+      "IR": 50,
+      "model": "clean model",
+      "test_set": "top3000 test",
+      "rows": 19736,
+      "AUC": 0.7907
+    },
+    {
+      "IR": 50,
+      "model": "top3000 model",
+      "test_set": "top3000 test",
+      "rows": 19736,
+      "AUC": 0.8392
+    },
+    {
+      "IR": 100,
+      "model": "clean model",
+      "test_set": "clean test",
+      "rows": 1958,
+      "AUC": 0.919
+    },
+    {
+      "IR": 100,
+      "model": "top3000 model",
+      "test_set": "clean test",
+      "rows": 1958,
+      "AUC": 0.897
+    },
+    {
+      "IR": 100,
+      "model": "clean model",
+      "test_set": "top3000 test",
+      "rows": 6256,
+      "AUC": 0.7697
+    },
+    {
+      "IR": 100,
+      "model": "top3000 model",
+      "test_set": "top3000 test",
+      "rows": 6256,
+      "AUC": 0.8384
+    }
+  ],
+  "paired_bootstrap": {
+    "IR50 clean test: clean model minus top3000 model": {
+      "delta": 0.018,
+      "ci95": [
+        0.0138,
+        0.0222
+      ]
+    },
+    "IR50 top3000 test: clean model minus top3000 model": {
+      "delta": -0.0486,
+      "ci95": [
+        -0.0522,
+        -0.0449
+      ]
+    },
+    "IR100 clean test: clean model minus top3000 model": {
+      "delta": 0.022,
+      "ci95": [
+        0.0122,
+        0.0326
+      ]
+    },
+    "IR100 top3000 test: clean model minus top3000 model": {
+      "delta": -0.0687,
+      "ci95": [
+        -0.0765,
+        -0.0612
+      ]
+    }
+  }
+}

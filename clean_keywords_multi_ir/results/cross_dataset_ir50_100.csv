@@ -1,0 +1,9 @@
+IR,model,test_set,rows,AUC
+50,clean model,clean test,7060,0.9265
+50,top3000 model,clean test,7060,0.9085
+50,clean model,top3000 test,19736,0.7907
+50,top3000 model,top3000 test,19736,0.8392
+100,clean model,clean test,1958,0.919
+100,top3000 model,clean test,1958,0.897
+100,clean model,top3000 test,6256,0.7697
+100,top3000 model,top3000 test,6256,0.8384

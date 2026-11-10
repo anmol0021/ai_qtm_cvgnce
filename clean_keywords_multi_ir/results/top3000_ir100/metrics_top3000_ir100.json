@@ -1,0 +1,28 @@
+{
+  "dataset": "top3000",
+  "impact_range": 100,
+  "train_rows": 6446,
+  "val_rows": 1138,
+  "test_rows": 6256,
+  "dropout": 0.5,
+  "early_stopping": "val_loss, patience 10",
+  "epochs_run": 126,
+  "best_epoch": 116,
+  "val_auc": 0.8753,
+  "test_auc": 0.8384,
+  "test_auc_ci95": [
+    0.8286,
+    0.8479
+  ],
+  "test_accuracy": 0.7558,
+  "test_precision": 0.8226,
+  "test_recall": 0.6522,
+  "test_f1": 0.7275,
+  "confusion_matrix": {
+    "TN": 2688,
+    "FP": 440,
+    "FN": 1088,
+    "TP": 2040
+  },
+  "top100_hit_rate": 0.99
+}

@@ -1,0 +1,30 @@
+{
+  "dataset": "clean",
+  "impact_range": 100,
+  "train_rows": 2935,
+  "val_rows": 519,
+  "test_rows": 1958,
+  "dropout": 0.5,
+  "early_stopping": "val_loss, patience 10",
+  "epochs_run": 108,
+  "best_epoch": 98,
+  "val_auc": 0.919,
+  "test_auc": 0.919,
+  "test_auc_ci95": [
+    0.9068,
+    0.931
+  ],
+  "test_accuracy": 0.8483,
+  "test_precision": 0.8515,
+  "test_recall": 0.8437,
+  "test_f1": 0.8476,
+  "confusion_matrix": {
+    "TN": 835,
+    "FP": 144,
+    "FN": 153,
+    "TP": 826
+  },
+  "top100_hit_rate": 1.0,
+  "share_test_pairs_with_unseen_keyword": 0.394,
+  "test_auc_both_keywords_seen": 0.9128
+}
